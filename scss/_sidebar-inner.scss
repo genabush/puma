@@ -1,0 +1,304 @@
+.sidebar{
+    font-size: 26px;
+    line-height: 31px;
+    padding-right: 55px;
+    padding-bottom: 80px;
+    @include res(900){
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    .woof_container{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .woof_container_inner{
+        h4{
+            text-transform: uppercase;
+            position: relative;
+            background: #c7d530;
+            font-size: 31px;
+            line-height: 37px;
+            @include flex();
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 40px 25px 25px;
+            margin: 0 0 9px;
+            @include res(1024){
+                padding: 18px 34px 18px 22px;
+                font-size: 24px;
+                line-height: 30px;
+            }
+            @include res(767){
+                padding: 15px 30px 15px 20px;
+            }
+            @include res(480){
+                padding: 12px 30px 12px 18px;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            a{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 0;
+                min-height: 40px;
+                min-width: 40px;
+                width: 100%;
+                height: 100%;
+                @include res(1024){
+                    min-height: 30px;
+                    min-width: 30px;
+                }
+                &:after{
+                    content: '';
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: - 14px;
+                    background:  url("/wp-content/themes/puma-theme/dist/images/left-arrow.svg") no-repeat 50%;
+                    background-size: cover;
+                    transform: rotate(270deg);
+                    transition: $transition;
+                    @include res(1024){
+                        width: 24px;
+                        height: 24px;
+                        margin-top: -12px;
+                    }
+                    @include res(767){
+                        width: 20px;
+                        height: 20px;
+                        margin-top: -10px;
+                    }
+                }
+
+                &.woof_front_toggle_opened{
+                    &:after{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+        ul.woof_list {
+            margin: 0 0 15px !important;
+        }
+        .irs-line {
+            height: 1px;
+            top: 66px;
+            background: #000;
+        }
+        .irs-with-grid .irs-grid,
+        .irs-bar{
+            display: none;
+        }
+        .irs-line-mid,
+        .irs-line-left,
+        .irs-line-right{
+            background: none;
+        }
+        .irs-from, .irs-to, .irs-single {
+            color: $main-color;
+            font-size: 12px;
+            line-height: 16px;
+            top: 37px;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            &:after{
+                display: none;
+            }
+        }
+        .irs-slider {
+            width: 19px;
+            height: 19px;
+            top: 57px;
+            background: #c7d530;
+            border: 1px solid $main-color;
+            border-radius: 50%;
+        }
+        .irs-min, .irs-max {
+            color: $main-color;
+            font-size: 22px;
+            line-height: 31px;
+            text-shadow: none;
+            top: 0;
+            padding: 1px 0px;
+            background: none;
+            border-radius: unset;
+            visibility: visible!important;
+            @include res(1024){
+                font-size: 18px;
+                line-height: 28px;
+            }
+            @include res(360){
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .irs-max:before {
+            content: 'Max:';
+            padding-right: 3px;
+            //display: inline-block;
+            //color: #000;
+            //font-size: 26px;
+        }
+        .irs-min:before {
+            content: 'Min:';
+            padding-right: 3px;
+            //display: inline-block;
+            //color: #000;
+            //font-size: 26px ;
+        }
+        .irs-max:after, .irs-min:after {
+            //content: '.00';
+        }
+    }
+    .summary .price{
+        margin: 20px 0;
+    }
+    .product{
+        width: 100%;
+    }
+}
+.summary{
+    margin-top: 10px;
+    .price-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: 'TheSansPlain', sans-serif;
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 37px;
+        .title-price {
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+        @include res(1024) {
+            font-size: 26px;
+            line-height: 32px;
+            justify-content: flex-start;
+        }
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 37px;
+        @include res(1024){
+            font-size: 26px;
+            line-height: 32px;
+        }
+        span {
+            margin-left: 5px;
+        }
+        del, ins {
+            font-family: TheSansPlain, sans-serif;
+        }
+        ins {
+            text-decoration: none;
+            margin-bottom: 3px;
+        }
+    }
+    .woocommerce-variation-price {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: 'TheSansPlain', sans-serif;
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 37px;
+        margin: 20px 0;
+        text-transform: uppercase;
+        span {
+            margin-left: 10px;
+        }
+        @include res(1024) {
+            font-size: 26px;
+            line-height: 32px;
+            justify-content: flex-start;
+        }
+    }
+}
+.variations {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    tr,
+    td,
+    tbody{
+        display: block;
+    }
+    .label{
+        label{
+            text-transform: uppercase;
+            position: relative;
+            background: #c7d530;
+            font-size: 31px;
+            line-height: 37px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 24px 15px 24px 24px;
+            margin: 0 0 10px;
+            @include res(1024){
+                padding: 18px 22px;
+                font-size: 24px;
+                line-height: 30px;
+            }
+            @include res(767){
+                padding: 15px 20px;
+            }
+            @include res(480){
+                padding: 12px 18px;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        .arrow{
+            cursor: pointer;
+            min-height: 40px;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            background:  url("/wp-content/themes/puma-theme/dist/images/left-arrow.svg") no-repeat 50%;
+            transform: rotate(270deg);
+            transition: $transition;
+            @include res(1024){
+                min-height: 30px;
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+            }
+
+            &.opened{
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .value{
+        &-box{
+            display: none;
+            margin: 15px 0;
+            background: $white;
+            padding: 0 0 5px 0;
+        }
+        & > div{
+
+        }
+    }
+}
+.reset_variations{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,113 @@
+.footer{
+    background: #d1d1d1;
+    padding: 80px 0 0;
+    @include res(860){
+        padding-top: 40px;
+    }
+
+    &__main{
+        padding: 0 40px 40px;
+        @include res(860){
+            padding-bottom: 20px;
+        }
+        @include res(480){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &__copyright{
+        border-top: 1px solid $white;
+        padding: 40px 40px 30px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 20px;
+        @include res(860){
+            font-size: 14px;
+            line-height: 22px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        @include res(480){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &__references{
+        padding: 10px 40px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            li {
+                margin-right: 50px;
+                margin-bottom: 5px;
+                padding: 5px 0px 0px;
+                a {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $main-color;
+                }
+            }
+        }
+        @include res(760){
+            a {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        @include res(480){
+            ul {
+                flex-direction: column;
+                li {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    .container{
+        @include res(860){
+            flex-wrap: wrap;
+        }
+    }
+    &__col{
+        width: 25%;
+        padding-right: 40px;
+        @include res(860){
+            width: 50%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            &:nth-child(even){
+                padding-right: 0;
+            }
+        }
+        @include res(480){
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+        li, a{
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 300;
+            color: $main-color;
+        }
+        li{
+            margin: 0 0 20px;
+        }
+    }
+    &__title{
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 20px;
+    }
+}

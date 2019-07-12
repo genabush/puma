@@ -1,0 +1,9 @@
+stages:
+- deploy
+
+deploy-staging:
+    stage: deploy
+    only:
+    - master
+    script:
+    - rsync -a --stats --rsh="sshpass -p $DEV_SSH_PASW ssh -o StrictHostKeyChecking=no -l $DEV_SSH_USER" ./ $DEV_SSH_HOST:/var/www/$DEV_SSH_USER/data/www/$DEV_SSH_HOST/wp-content/themes/$PROJECT_NAME/

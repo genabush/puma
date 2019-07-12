@@ -1,0 +1,40 @@
+.login-box{
+    max-width: 480px;
+    margin: 0 auto 60px;
+    h2{
+        font-size: 48px;
+        line-height: 54px;
+        margin: 0 0 60px;
+        text-align: center;
+        font-weight: 700;
+    }
+    form{
+        input{
+            width: 100%;
+            margin: 0 0 15px;
+            display: inline-block;
+        }
+        .button{
+            margin: 20px 0;
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .woocommerce-form__label-for-checkbox{
+        font-size: 24px;
+        line-height: 32px;
+        @include res(1024){
+            font-size: 20px;
+        }
+    }
+    &__lost-pass{
+        margin: 0 0 40px;
+    }
+    .container--two-columns{
+        padding: 0;
+    }
+}

@@ -1,0 +1,63 @@
+.breadcrumbs{
+    margin-bottom: 30px;
+    nav{
+        background: #e4eaa6;
+        display: flex!important;
+        align-items: stretch;
+        flex-wrap: wrap;
+        font-size: 31px;
+        line-height: 37px;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 0;
+        @include res(1024){
+            font-size: 24px;
+            line-height: 30px;
+        }
+        @include res(480){
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        a{
+            @include flex();
+            align-items: center;
+            width: 440px;
+            padding: 25px 25px 25px 60px;
+            background: #c7d530 url("/wp-content/themes/puma-theme/dist/images/left-arrow.svg") no-repeat 22px 50%;
+            @include res(1024){
+                padding: 18px 22px 18px 50px;
+                background-size: auto 20px;
+                background-position: 15px 50%;
+                width: 380px;
+            }
+            @include res(900){
+                width: auto;
+            }
+            @include res(767){
+                padding: 15px 20px 15px 50px;
+            }
+            @include res(480){
+                padding: 12px 18px 12px 45px;
+                background-position: 12px 50%;
+            }
+            & + a {
+                display: none;
+            }
+        }
+        span{
+            padding: 25px;
+            display: inline-block;
+            @include res(1024){
+                padding: 18px 22px;
+            }
+            @include res(767){
+                padding: 15px 20px;
+            }
+            @include res(480){
+                padding: 12px 18px;
+            }
+        }
+    }
+
+}

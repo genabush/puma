@@ -1,0 +1,50 @@
+.home {
+    .advertising-banner {
+        height: 1212px;
+    }
+}
+.advertising-banner{
+    padding:60px 0 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    align-items: stretch;
+    @include res(1024){
+        height: 640px!important;
+    }
+    @include res(767){
+        height: 560px!important;
+        padding: 40px 0 30px;
+    }
+    @include res(480){
+        height: 460px!important;
+    }
+    .container--box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 86px;
+        margin: 0 0 40px;
+        color: $white;
+        max-width: 780px;
+        @include res(1024){
+            font-size: 60px;
+            line-height: 72px;
+        }
+        @include res(767){
+            font-size: 42px;
+            line-height: 50px;
+        }
+        @include res(480){
+            font-size: 30px;
+            line-height: 42px;
+        }
+    }
+}

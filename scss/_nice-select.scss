@@ -1,0 +1,85 @@
+.nice-select {
+    cursor: pointer;
+    display: block;
+    transition: $transition;
+    outline: none;
+    user-select: none;
+    white-space: nowrap;
+
+    // Arrow
+    &:after {
+        content: '';
+        min-height: 40px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        background: url(/wp-content/themes/puma-theme/dist/images/left-arrow.svg) no-repeat 50%;
+        transform: rotate(270deg);
+        transition: all .2s ease-out;
+    }
+
+    &.open {
+        &:after {
+            transform: rotate(-135deg);
+        }
+        .list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    // List and options
+    .list {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        margin-top: 10px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        pointer-events: none;
+        top: 100%; left: 0;
+        transform-origin: 50% 0;
+        transform: scale(.75) translateY(- 78px / 2);
+        transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+        z-index: 9;
+    }
+    .option {
+        cursor: pointer;
+        font-weight: 400;
+        outline: none;
+        text-align: left;
+        transition: all 0.2s;
+    }
+}
+
+// Use display instead of opacity for IE <= 10
+.no-csspointerevents .nice-select {
+    .list {
+        display: none;
+    }
+    &.open {
+        .list {
+            display: block;
+        }
+    }
+}
+.variations{
+    li{
+        position: relative;
+    }
+    .label{
+        white-space: nowrap;
+        label {
+            max-width: 170px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: top;
+        }
+    }
+}

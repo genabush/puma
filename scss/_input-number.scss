@@ -1,0 +1,77 @@
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px;
+    @include res(900){
+        justify-content: flex-start;
+    }
+
+    label{
+        font-size: 31px;
+        line-height: 37px;
+        text-transform: uppercase;
+        @include res(1024){
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    .main_number_plugin{
+        position: relative;
+        margin-left: 15px;
+        @include res(1024){
+            width: 160px!important;
+        }
+    }
+    .input_plugin_number {
+        font-size: 31px;
+        text-align: center;
+        line-height: 37px;
+        font-weight: 400;
+        outline: none;
+        border: 1px solid #c7d530;
+        padding: 0 45px;
+        @include res(1024){
+            font-size: 26px;
+            line-height: 32px;
+            padding: 0 35px;
+            width: 160px!important;
+            height: 70px!important;
+        }
+    }
+    .plus_plugin_number,
+    .minus_plugin_number{
+        position: absolute;
+        height: 100%;
+        width: 45px;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+        @include res(1024){
+            width: 35px;
+        }
+        &:after{
+            line-height: 1;
+            font-size: 34px;
+            cursor: pointer;
+            @include res(1024){
+                font-size: 30px;
+            }
+        }
+    }
+    .minus_plugin_number{
+        &:after{
+            content: '-';
+        }
+    }
+    .plus_plugin_number{
+        left: auto;
+        right: 0;
+        &:after{
+            content: '+';
+        }
+    }
+}

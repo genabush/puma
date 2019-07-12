@@ -1,0 +1,112 @@
+.main-banner{
+    padding: 70px 0;
+    height: 860px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include res(1024){
+        height: 600px;
+        padding: 50px 0;
+    }
+    @include res(767){
+        height: 460px;
+    }
+
+    .container{
+        padding-right: 80px;
+        padding-left: 80px;
+        @include res(1024){
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+        @include res(480){
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    }
+    &__title{
+        display: inline;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 94px;
+        background: rgba(255,255,255,.8);
+        padding: 2px 0;
+        @include res(1024){
+            font-size: 65px;
+            line-height: 87px;
+        }
+        @include res(767){
+                font-size: 44px;
+                line-height: 60px;
+        }
+
+        @include res(480){
+            font-size: 30px;
+            line-height: 42px;
+        }
+        span{
+            &.pad-left{
+                padding-left: 22px;
+                @include res(480){
+                    padding-left: 12px;
+                }
+            }
+            &.pad-right{
+                padding-right: 22px;
+                @include res(480){
+                    padding-right: 12px;
+                }
+            }
+            &:last-child{
+                padding-right: 22px!important;
+                @include res(480){
+                    padding-right: 12px!important;
+                }
+            }
+        }
+    }
+    &__subtitle{
+        display: inline;
+        font-size: 35px;
+        line-height: 48px;
+        text-transform: uppercase;
+        background: rgba(255,255,255,.8);
+        padding: 1.8px 0;
+        max-width: 900px;
+
+        @include res(1024){
+            font-size: 28px;
+            line-height: 40px;
+        }
+        @include res(767){
+            font-size: 44px;
+            line-height: 60px;
+        }
+
+        @include res(480){
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        span{
+            &.pad-left{
+                padding-left: 22px;
+                @include res(480){
+                    padding-left: 12px;
+                }
+            }
+            &.pad-right{
+                padding-right: 22px;
+                @include res(480){
+                    padding-right: 12px;
+                }
+            }
+            &:last-child{
+                padding-right: 22px!important;
+                @include res(480){
+                    padding-right: 12px!important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.link-list{
+
+    li{
+        margin-bottom: 2px;
+        &:last-child{
+            margin: 0;
+        }
+        a{
+            display: block;
+        }
+    }
+}
+
+#section_2 {
+    overflow: hidden;
+    .container--box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0;
+        margin: 0;
+    }
+    .link-list {
+        &__left-img,
+        &__right-img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include res(660) {
+                background: #c8d540 !important;
+            }
+        }
+
+        &__left-img,
+        &__right-img,
+        &__text {
+            float: left;
+            position: static;
+            height: 340px;
+            @include res(1200) {
+                height: 280px;
+            }
+            @include res(1024) {
+                height: 240px;
+            }
+            @include res(992) {
+                height: 220px;
+            }
+            @include res(768) {
+                height: 180px;
+            }
+        }
+        &__left-img {
+            width: 24.3%;
+            @include res(660) {
+                width: 0%;
+            }
+        }
+        &__right-img {
+            width: 45%;
+            @include res(660) {
+                width: 0%;
+            }
+        }
+        &__text {
+            background: #c8d540;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            font-family: DINPro, san-serif;
+            color: $main-color;
+            font-size: 41px;
+            line-height: 49px;
+            text-transform: uppercase;
+            width: 30.7%;
+            @include res(1200) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @include res(1024) {
+                font-size: 26px;
+                line-height: 32px;
+            }
+            @include res(768) {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            @include res(660) {
+                width: 100%;
+                justify-content: center;
+                padding: 20px 50px;
+                font-size: 26px;
+                line-height: 32px;
+            }
+            @include res(480) {
+                padding: 20px 40px;
+            }
+        }
+    }
+}

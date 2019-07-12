@@ -1,0 +1,8 @@
+.woocommerce-order-received {
+    .container--two-columns {
+        padding: 0 40px;
+        @include res(767) {
+            padding: 0 20px;
+        }
+    }
+}

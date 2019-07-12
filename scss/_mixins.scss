@@ -1,0 +1,16 @@
+
+@mixin res($bp) {
+  @media screen and (max-width:$bp + px) { @content; }
+}
+
+@mixin res-min($bp) {
+  @media screen and (min-width:$bp + px) { @content; }
+}
+
+@mixin flex(){
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+}

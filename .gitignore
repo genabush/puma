@@ -1,0 +1,9 @@
+.idea/
+node_modules/
+vendor/
+gulpenv.js
+assets/build/
+.git/
+.git
+ git
+acf-json/

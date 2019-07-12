@@ -1,0 +1,177 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $main-color;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $main-color;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $main-color;
+}
+
+input[type='checkbox']:not(#terms){
+    display: none!important;
+
+    & + label{
+        position: relative;
+        padding: 0 0 0 38px;
+        margin: 0;
+        display: block;
+        @include res(1024){
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        &.woof_checkbox_label_selected{
+            font-weight: 400;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $main-color;
+            background: $white;
+        }
+    }
+    &:checked{
+        & + label:before{
+            background: #c7d530;
+        }
+    }
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    input[type='checkbox']#terms {
+        margin: 0;
+    }
+}
+
+input[type='radio']{
+    display: none!important;
+
+    & + label{
+        position: relative;
+        padding: 0 0 0 38px;
+        margin: 0;
+        display: block;
+        @include res(1024){
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $main-color;
+            background: $white;
+        }
+    }
+    &:checked{
+        & + label:before{
+            background: #c7d530;
+        }
+    }
+}
+.btn, .button{
+    font-family: 'DINPro', san-serif;
+    cursor: pointer;
+    position: relative;
+    display:inline-block;
+    vertical-align:top;
+    padding: 17px 70px 17px 17px;
+    border:none;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    background:$white;
+    color:$main-color;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition:$transition;
+    outline: none;
+    @include res(1024){
+        font-size: 22px;
+        line-height: 26px;
+        padding: 15px 60px 15px 15px;
+    }
+    @include res(640){
+        font-size: 20px;
+        line-height: 22px;
+    }
+    @include res(350){
+        font-size: 18px;
+        line-height: 20px;
+    }
+    &:after{
+        content: '';
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url("/wp-content/themes/puma-theme/dist/images/right-arrow.svg")no-repeat 50%;
+        background-size: 40px auto;
+        @include res(1024){
+            width: 60px;
+            background-size: 32px auto;
+        }
+    }
+    &[name="add-to-cart"],
+    &.single_add_to_cart_button{
+        font-size: 31px;
+        line-height: 37px;
+        background: #a3ccee;
+        border-color: #a3ccee;
+        padding: 25px 55px 25px 25px;
+        width: 100%;
+        text-align: left;
+        @include res(1024){
+            font-size: 24px;
+            line-height: 28px;
+            padding: 17px 35px 17px 17px;
+            max-width: 320px;
+        }
+        &:after{
+            display: none;
+        }
+    }
+    &:hover{
+
+    }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+textarea{
+    background: #fff;
+    color: $main-color;
+    font-size: 26px;
+    line-height: 32px;
+    border: 1px solid #e4eaa6;
+    box-shadow: none!important;
+    padding: 4px 6px;
+    outline: none;
+    font-family: 'DINPro', sans-serif;
+    @include res(1280){
+        font-size: 22px;
+    }
+    @include res(767){
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &:-webkit-autofill{
+        background: #fff!important;
+        -webkit-box-shadow: 0 0 0 1000px white inset!important;
+    }
+}

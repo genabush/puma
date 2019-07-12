@@ -1,0 +1,90 @@
+.banner-box{
+    height: 806px;
+    padding: 120px 0 40px;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include res(1024){
+        height: 640px;
+        padding-top: 80px;
+    }
+    @include res(767){
+        height: 560px;
+        padding: 40px 0 30px;
+    }
+    @include res(480){
+        height: 540px;
+        padding: 10px 0 10px;
+    }
+    &--no-text{
+        @extend .banner-box;
+        height: 1037px;
+        width: 100%;
+        @include res(1024){
+            height: 840px;
+        }
+        @include res(767){
+            height: 640px;
+        }
+        @include res(480){
+            height: 500px;
+        }
+    }
+
+    &__title{
+        color: $white;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 94px;
+        margin-bottom: 15px;
+        @include res(1024){
+            font-size: 60px;
+            line-height: 72px;
+        }
+        @include res(767){
+            font-size: 42px;
+            line-height: 50px;
+        }
+        @include res(600){
+            font-size: 28px;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+    }
+    &__subtitle{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 42px;
+        color: $white;
+        margin-bottom: 40px;
+        @include res(1024){
+            font-size: 32px;
+            line-height: 40px;
+        }
+        @include res(767){
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @include res(600){
+            font-size: 22px;
+            line-height: 32px;
+            margin-bottom: 10px;
+        }
+    }
+    p{
+        color: $white;
+        margin-bottom: 26px;
+        text-align: justify;
+        @include res(480) {
+            margin-bottom: 10px;
+        }
+    }
+}
+.page-template-page-internal {
+    .banner-box--no-text{
+        margin-bottom: 15px;
+    }
+}
